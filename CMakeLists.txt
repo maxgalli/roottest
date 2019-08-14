@@ -74,6 +74,7 @@ endif()
 set(compression_default "zlib" CACHE STRING "" FORCE)
 
 get_filename_component(ROOT_LIBRARY_DIR "${ROOTSYS}/lib" ABSOLUTE)
+set(ROOT_LIBRARY_DIR ${ROOT_LIBRARY_DIR}:${ROOT_LIBRARY_DIR}/python${PYTHON_VERSION_STRING})
 
 # Detect bitness.
 if(CMAKE_SYSTEM_PROCESSOR MATCHES amd64.*|x86_64.*|aarch64.*|ppc64.*
